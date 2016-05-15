@@ -1,2 +1,7 @@
-name;phonenumber;code;country
-3 Kundtjänst;+46771735300;9;Sweden
+name;phonenumber;dtfmcode;country
+3;+46771735300;9;SE
+Telia;+46771990200;8;SE
+Nordea;+46771224488;9;SE
+SEB;+46771365365;5;SE
+Bredbandsbolaget;+46770777000;1;SE
+Comhem;+46771550000;#;SE
