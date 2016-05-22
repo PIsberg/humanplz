@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="io.humanplz.humanplz">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver  android:name=".PhoneCallReceiver" android:enabled="true" android:permission="android.permission.PROCESS_OUTGOING_CALLS">
+            <intent-filter android:priority="2147483647">
+                <action android:name="android.intent.action.PHONE_STATE" />
+                <action android:name="android.intent.action.NEW_OUTGOING_CALL" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+    <!-- Permission used for making out going calls -->
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <!-- Permission used for downloading the database from the internet -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <!-- Permission used for intercepting calls to call services -->
+    <uses-permission android:name="android.permission.NEW_OUTGOING_CALL"/>
+
+    <!-- Permission used for obtaining the phones telephonenumber -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <!-- Permission used for modifying the calls to call services -->
+    <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
+
+</manifest>
